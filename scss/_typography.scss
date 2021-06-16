@@ -15,21 +15,34 @@ body {
 }
 
 h1 {
-  @include adaptiv-font(100, 16);
-  letter-spacing: 1.2rem;
+  @include adaptiv-font(100, 50);
+  letter-spacing: 1.1rem;
   font-weight: bold;
+  line-height: 1.8em;
+  text-transform: uppercase;
 }
 
 h2 {
   @include adaptiv-font(90, 22);
+  line-height: 1.6em;
 }
 
 h3 {
   font-size: 1.5rem;
+  line-height: 1.3em;
 }
 
 p {
   @include adaptiv-font(30, 16);
+}
+
+span {
+  @include adaptiv-font(35, 25);
+}
+
+.title {
+  h1 {
+  }
 }
 
 .about h3 {

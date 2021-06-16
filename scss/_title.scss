@@ -1,0 +1,41 @@
+.title {
+  background: url('../assets/main-min.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .social {
+    & ul li {
+      display: inline-block;
+    }
+
+    img {
+      margin-top: 10px;
+      margin-right: 5px;
+      width: 20px;
+      height: 20px;
+      transform: scale(1);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    img:hover {
+      transform: scale(1.15);
+    }
+  }
+
+  & .title_main {
+    margin-bottom: 80%;
+    position: relative;
+  }
+
+  h1,
+  h2,
+  p {
+    color: $white;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  }
+  // h1 {
+  //   margin-top: 40px;
+  // }
+}
