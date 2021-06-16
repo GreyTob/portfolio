@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$maxWidth: 3440;
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+  );
+}
+
+.header {
+  ul {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    @include adaptiv-font(24, 20);
+    line-height: 28px;
+  }
+}
+
+.jumbotron {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  @include adaptiv-font(72, 45);
+  line-height: 84px;
+}
+
+.theProplem {
+  h2 {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    @include adaptiv-font(64, 35);
+    line-height: 75px;
+  }
+
+  p {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    @include adaptiv-font(32, 19);
+    line-height: 37px;
+
+    & strong {
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .theProplem {
+    p {
+      text-align: center;
+      line-height: 27px;
+    }
+  }
+}
+
+.hero .hero-message {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 500;
+  @include adaptiv-font(48, 30);
+  line-height: 56px;
+}
+
+.PPC {
+  h2 {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    @include adaptiv-font(64, 38);
+    line-height: 75px;
+  }
+
+  p {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    @include adaptiv-font(32, 22);
+    line-height: 37px;
+  }
+}
+
+@media (max-width: 768px) {
+  .PPC {
+    h2 {
+      line-height: 45px;
+    }
+
+    p {
+      line-height: 27px;
+    }
+  }
+}
+
+.theTeam {
+  h2,
+  .userPhoto {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    @include adaptiv-font(64, 40);
+    line-height: 75px;
+  }
+
+  .figcaption {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    @include adaptiv-font(24, 18);
+    line-height: 28px;
+
+    em {
+      font-family: Roboto, sans-serif;
+      font-style: italic;
+      font-weight: normal;
+      @include adaptiv-font(18, 14);
+      line-height: 21px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .theTeam {
+    h2 {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.footer {
+  p {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    @include adaptiv-font(18, 14);
+    line-height: 21px;
+  }
+}
