@@ -1,0 +1,69 @@
+.about {
+  overflow: hidden;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-template-rows: 1fr 75% 1rf;
+  padding: 0 30px;
+
+  h2 {
+    margin-top: 3%;
+    color: $white;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .slide {
+    height: 75vh;
+    border-radius: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  @media screen and (min-width: 1840px) {
+    .slide {
+      margin: 0 20px;
+    }
+  }
+
+  .slide h3 {
+    color: $white;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    margin: 0;
+    opacity: 0;
+  }
+
+  .black h3 {
+    color: $black;
+  }
+
+  .slide.active {
+    flex: 10;
+  }
+
+  .slide.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease 0.4s;
+  }
+
+  p {
+    color: $white;
+    margin-bottom: 3%;
+  }
+}

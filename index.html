@@ -2,46 +2,81 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Full page scroll</title>
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet"
-      type="text/css"
-    />
     <link rel="stylesheet" href="css/common.css" />
+    <title>Laptov Sergey</title>
   </head>
   <body>
-    <!-- <div class="wrapper"> -->
-    <div id="main" class="scroll-container">
-      <section class="section1">
+    <div id="main" class="wrapper scroll-container">
+      <section class="main">
         <div>
-          <span> It's beautiful and don't need Jquery :D </span>
+          <h1>Этот сайт - мое портфолио</h1>
         </div>
       </section>
-      <section class="section2">
-        <div>
-          <span> Working on Tablets and Phones </span>
+      <section class="about">
+        <h2>Немного о себе</h2>
+        <div class="container">
+          <div
+            class="slide"
+            style="background-image: url('./assets/flexGalery/1min.JPG')"
+          >
+            <h3>Бег в парке</h3>
+          </div>
+          <div
+            class="slide"
+            style="background-image: url('./assets/flexGalery/2min.JPG')"
+          >
+            <h3>Тадж-Махал</h3>
+          </div>
+          <div
+            class="slide"
+            style="background-image: url('./assets/flexGalery/3min.JPG')"
+          >
+            <h3>На природе</h3>
+          </div>
+          <div
+            class="slide"
+            style="background-image: url('./assets/flexGalery/4min.JPG')"
+          >
+            <h3>Парк в Краснодаре</h3>
+          </div>
+          <div
+            class="slide black xl"
+            style="background-image: url('./assets/flexGalery/5min.JPG')"
+          >
+            <h3>Акро-йога</h3>
+          </div>
+          <div
+            class="slide xl"
+            style="background-image: url('./assets/flexGalery/6min.JPG')"
+          >
+            <h3>Начало осени</h3>
+          </div>
         </div>
+        <p>
+          На карточках несколько моих фотографи. Но самое интересное то, что эта
+          небольшая галерея написана на обычном JavaScript и CSS
+        </p>
       </section>
       <section class="section3">
         <div>
-          <span> Anuncie aqui </span>
+          <span> а Тут с третьего </span>
         </div>
       </section>
-      <section class="section4">
+      <section class="works">
         <div>
-          <span> Funciona até no IE ^^ (IE 9 +)! </span>
+          <span> Тут пречень работ </span>
         </div>
       </section>
-      <section class="section5">
+      <section class="contacts">
         <div>
-          <span> Edivaldo Pericleiton Rasta </span>
+          <span> А тут контактные данные </span>
         </div>
       </section>
     </div>
-    <!-- </div> -->
+
     <script src="js/fullScrollSlider.js"></script>
+    <script src="js/flexGalery.js"></script>
   </body>
 </html>

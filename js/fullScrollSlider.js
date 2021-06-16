@@ -7,24 +7,24 @@
   /**
    * Full scroll main function
    */
-  let fullScroll = function (params) {
+  const fullScroll = function (params) {
     /**
      * Main div
      * @type {Object}
      */
-    let main = document.getElementById(params.mainElement)
+    const main = document.getElementById(params.mainElement)
 
     /**
      * Sections divclass
      * @type {Array}
      */
-    let sections = main.getElementsByTagName('section')
+    const sections = main.getElementsByTagName('section')
 
     /**
      * Full page scroll configurations
      * @type {Object}
      */
-    let defaults = {
+    const defaults = {
       container: main,
       sections: sections,
       animateTime: params.animateTime || 0.7,
@@ -49,7 +49,7 @@
   fullScroll.prototype.init = function () {
     this.buildPublicFunctions().buildSections().buildDots().addEvents()
 
-    let anchor = location.hash.replace('#', '').split('/')[0]
+    const anchor = location.hash.replace('#', '').split('/')[0]
     location.hash = 0
     this.changeCurrentPosition(anchor)
     this.registerIeTags()
@@ -60,8 +60,8 @@
    * @return {Object} this(fullScroll)
    */
   fullScroll.prototype.buildSections = function () {
-    let sections = this.defaults.sections
-    for (var i = 0; i < sections.length; i++) {
+    const sections = this.defaults.sections
+    for (let i = 0; i < sections.length; i++) {
       sections[i].setAttribute('data-index', i)
     }
     return this
@@ -81,12 +81,12 @@
       this.ul.className
     )
 
-    let _self = this
-    var sections = this.defaults.sections
+    const _self = this
+    const sections = this.defaults.sections
 
     for (let i = 0; i < sections.length; i++) {
-      let li = document.createElement('li')
-      let a = document.createElement('a')
+      const li = document.createElement('li')
+      const a = document.createElement('a')
 
       a.setAttribute('href', '#' + i)
       li.appendChild(a)
@@ -179,7 +179,7 @@
 
     this.hashChange = function (event) {
       if (location) {
-        let anchor = location.hash.replace('#', '').split('/')[0]
+        const anchor = location.hash.replace('#', '').split('/')[0]
         if (anchor !== '') {
           if (anchor < 0) {
             _self.changeCurrentPosition(0)
@@ -211,9 +211,9 @@
     }
 
     this.animateScroll = function () {
-      let animateTime = this.defaults.animateTime
-      let animateFunction = this.defaults.animateFunction
-      let position = this.defaults.currentPosition * 100
+      const animateTime = this.defaults.animateTime
+      const animateFunction = this.defaults.animateFunction
+      const position = this.defaults.currentPosition * 100
 
       this.defaults.container.style.webkitTransform =
         'translateY(-' + position + '%)'
@@ -277,6 +277,6 @@ new fullScroll({
   mainElement: 'main',
   displayDots: true,
   dotsPosition: 'right',
-  animateTime: 0.7,
-  animateFunction: 'ease',
+  animateTime: 0.8,
+  animateFunction: 'cubic-bezier(0.68, -0.6, 0.32, 1.6)',
 })
