@@ -5,6 +5,11 @@
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/common.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <title>Laptov Sergey</title>
   </head>
   <body>
@@ -48,10 +53,9 @@
           <h1>Лаптов Сергей</h1>
           <p>Начинающий фронтэнд разработчик</p>
           <h2>Сайт - портфолио</h2>
-          <div class="arrow bounce"></div>
         </div>
         <div id="scrolDownBtn">
-          <a href="#1"><span></span>Scroll</a>
+          <a href="#1"><span></span></a>
         </div>
       </section>
       <section class="about">
@@ -99,14 +103,98 @@
           эта небольшая галерея написана на обычном JavaScript и CSS
         </p>
       </section>
-      <section class="section3">
-        <div>
-          <span> а Тут с третьего </span>
-        </div>
-      </section>
+
       <section class="works">
-        <div>
-          <span> Тут пречень работ </span>
+        <div class="container">
+          <div class="sidebar">
+            <div
+              style="
+                background: radial-gradient(
+                    ellipse farthest-corner at right bottom,
+                    #fedb37 0%,
+                    #fdb931 8%,
+                    #9f7928 30%,
+                    #8a6e2f 40%,
+                    transparent 80%
+                  ),
+                  radial-gradient(
+                    ellipse farthest-corner at left top,
+                    #ffffff 0%,
+                    #ffffac 8%,
+                    #d1b464 25%,
+                    #5d4a1f 62.5%,
+                    #5d4a1f 100%
+                  );
+              "
+            >
+              <h1>Just text</h1>
+              <p>I can change it</p>
+            </div>
+            <div
+              style="
+                background: linear-gradient(-135deg, #e55d87 0%, #5fc3e4 100%);
+              "
+            >
+              <h1>Life Hutch</h1>
+              <p>Love, death & robots</p>
+            </div>
+            <div style="background: linear-gradient(-190deg, #b9deed, #74703d)">
+              <h1>Zima Blue</h1>
+              <p>Love, death & robots</p>
+            </div>
+            <div style="background: linear-gradient(3deg, #9c624b, #957f50)">
+              <div class="info">
+                <h3>Учебный проект</h3>
+                <p>Разработка дизайна в Photoshop и верстка</p>
+                <p>HTML + CSS</p>
+                <p>Первая работа после прохождения курсов</p>
+              </div>
+
+              <div class="links">
+                <a class="item" href="llamagroup.netlify.app" target="_blank"
+                  >Открыть сайт</a
+                >
+                <a
+                  class="item"
+                  href="https://github.com/GreyTob/mySiteTrain"
+                  target="_blank"
+                  >Посмотреть на GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="main-slide">
+            <div
+              style="
+                background-image: url('https://images.unsplash.com/photo-1617348380507-4092d0523459?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80');
+              "
+            ></div>
+            <div
+              style="
+                background-image: url('https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=401&q=80');
+              "
+            ></div>
+            <div
+              style="
+                background-image: url('https://images.unsplash.com/photo-1518253042715-a2534e1b0a7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80');
+              "
+            ></div>
+            <div
+              style="
+                background-image: url('https://images.unsplash.com/photo-1619891831378-a2f158dac36f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aXJvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+              "
+            >
+              <h2>llama</h2>
+            </div>
+          </div>
+          <div class="controls">
+            <button class="down-button">
+              <i class="fas fa-arrow-down"></i>
+            </button>
+            <button class="up-button">
+              <i class="fas fa-arrow-up"></i>
+            </button>
+          </div>
         </div>
       </section>
       <section class="contacts">
@@ -118,5 +206,6 @@
 
     <script src="js/fullScrollSlider.js"></script>
     <script src="js/flexGalery.js"></script>
+    <script src="js/sliderWorks.js"></script>
   </body>
 </html>

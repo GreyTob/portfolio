@@ -1,3 +1,143 @@
 .works {
-  background-color: #cc938e;
+  height: 100vh;
+
+  h2 {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 10;
+    opacity: 1s;
+s  }
+
+  .container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .sidebar > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+  }
+
+  .info {
+    position: absolute;
+    top: 20px;
+    margin: 5px;
+    h3 {
+      margin-bottom: 1em;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+  }
+
+  @media (min-width: 767px) {
+    .info {
+      margin: 25px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .info {
+      margin: 50px;
+    }
+  }
+
+  .links {
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      margin: 5px;
+      text-align: center;
+      color: $white;
+      transform: scale(1);
+      letter-spacing: 0.1em;
+      transition: all 0.3s ease;
+    }
+
+    .item:hover {
+      color: $gray;
+      letter-spacing: 0.12em;
+    }
+  }
+
+  .main-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .main-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+  }
+
+  button {
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  @media (min-width: 1024px) {
+    button {
+      font-size: 56px;
+      padding: 25px;
+    }
+  }
+
+  button:hover {
+    color: #222;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  .container .controls button {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+  }
+
+  .container .controls .down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .container .controls .up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 }
