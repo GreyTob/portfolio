@@ -191,11 +191,9 @@ h6 {
 .works {
   height: 100vh; }
   .works h2 {
-    position: absolute;
-    top: 2%;
-    left: 2%;
+    padding: 1% 2%;
     z-index: 10;
-    text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.35); }
+    text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.25); }
   .works .container {
     position: relative;
     overflow: hidden;
