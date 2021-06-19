@@ -5,6 +5,9 @@
   background-position: center;
   transform: scale(1);
   .social {
+    position: absolute;
+    top: 1%;
+
     & ul li {
       display: inline-block;
     }
@@ -24,7 +27,8 @@
   }
 
   & .title_main {
-    margin-bottom: 80%;
+    margin-top: 5%;
+    margin-bottom: 20%;
     position: relative;
   }
 
