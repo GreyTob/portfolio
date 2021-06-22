@@ -1,5 +1,6 @@
 .works {
   height: 100vh;
+  position: relative;
 
   h2 {
     padding: 1% 2%;
@@ -137,5 +138,90 @@
     transform: translateY(-100%);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+  }
+
+  #ArrowRight span {
+    position: absolute;
+    bottom: 60px;
+    left: 52%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    -webkit-animation: arrRight 1.5s infinite;
+    animation: arrRight 1.5s infinite;
+    box-sizing: border-box;
+  }
+  @-webkit-keyframes arrRight {
+    0% {
+      -webkit-transform: rotate(-135deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(-135deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+  @keyframes arrRight {
+    0% {
+      transform: rotate(-135deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-135deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+
+  #ArrowLeft span {
+    position: absolute;
+    bottom: 60px;
+    left: 48%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-animation: arrLeft 1.5s infinite;
+    animation: arrLeft 1.5s infinite;
+    box-sizing: border-box;
+  }
+  @-webkit-keyframes arrLeft {
+    0% {
+      -webkit-transform: rotate(45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+  @keyframes arrLeft {
+    0% {
+      transform: rotate(45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
   }
 }

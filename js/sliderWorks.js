@@ -1,5 +1,7 @@
 const upBtn = document.querySelector('.up-button')
 const downBtn = document.querySelector('.down-button')
+const ArrowLeft = document.querySelector('#ArrowLeft')
+const ArrowRight = document.querySelector('#ArrowRight')
 
 const container = document.querySelector('.works')
 const sidebar = document.querySelector('.sidebar')
@@ -19,8 +21,22 @@ upBtn.addEventListener('click', () => {
 downBtn.addEventListener('click', () => {
   changeSlide('down')
 })
+ArrowRight.addEventListener('click', () => {
+  changeSlide('up')
+})
+ArrowLeft.addEventListener('click', () => {
+  changeSlide('down')
+})
+document.addEventListener('keydown', (event) => {
+  console.log(event.key)
+  if (event.key === 'ArrowRight') {
+    changeSlide('up')
+  } else if (event.key === 'ArrowLeft') {
+    changeSlide('down')
+  }
+})
 
-//переключения по скролу и кнопкам отключил, из-за fullSkroll
+//переключения по скролу и кнопкам ввер-вниз отключил, из-за fullSkroll
 // document.addEventListener('keydown', (event) => {
 //   // console.log(event.key)
 //   if (event.key === 'ArrowUp') {
