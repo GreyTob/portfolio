@@ -125,7 +125,47 @@ h6 {
     padding: 0 5%; }
 
 .contacts {
-  background-color: #d2c598; }
+  background-color: #d2c598;
+  background: url("../assets/main-min.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .contacts .formWrapper {
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); }
+    .contacts .formWrapper input {
+      outline: 0;
+      background: #ffffff;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px; }
+    .contacts .formWrapper textarea {
+      width: 100%;
+      max-height: 400px;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      resize: vertical; }
+    .contacts .formWrapper button {
+      text-transform: uppercase;
+      outline: 0;
+      background: #4caf50;
+      width: 100%;
+      border: 0;
+      padding: 15px;
+      color: #ffffff;
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease;
+      cursor: pointer; }
+    .contacts .formWrapper button:hover,
+    .contacts .formWrapper button:active,
+    .contacts .formWrapper button:focus {
+      background: #43a047; }
   .contacts .social {
     width: 100%;
     height: 100%; }
@@ -135,7 +175,7 @@ h6 {
       align-items: flex-end;
       width: 100%;
       height: 100%;
-      padding-bottom: 1.5%; }
+      padding-bottom: 1%; }
     .contacts .social ul li {
       display: inline-block; }
     .contacts .social img {
@@ -475,6 +515,9 @@ span {
 .works a {
   font-size: calc( 10px + 25 * ((100vw - 280px) / 3160));
   line-height: 1.2em; }
+
+.contacs .form input {
+  font-size: calc( 12px + 23 * ((100vw - 280px) / 3160)); }
 
 body,
 html {

@@ -59,3 +59,9 @@ span {
     line-height: 1.2em;
   }
 }
+
+.contacs {
+  .form input {
+    @include adaptiv-font(35, 12);
+  }
+}

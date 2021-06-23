@@ -54,7 +54,7 @@
         </div>
         <div class="title_main">
           <h1>Лаптов Сергей</h1>
-          <p>Начинающий фронтэнд разработчик</p>
+          <p>Фронтэнд разработчик</p>
           <h2>Сайт - портфолио</h2>
         </div>
         <div id="scrolDownBtn">
@@ -104,7 +104,7 @@
         </div>
         <p>
           На карточках несколько моих фотографий. Но самое интересное то, что
-          эта небольшая галерея написана на обычном JavaScript и CSS
+          эта небольшая галерея написана на обычном JavaScript и flex-элементах
         </p>
       </section>
 
@@ -367,9 +367,15 @@
         </div>
       </section>
       <section class="contacts">
-        <div class="form">
-          <span> А тут контактные данные </span>
+        <div class="formWrapper">
+          <form class="login-form">
+            <input type="text" placeholder="Ваше имя" />
+            <input type="email" placeholder="E-mail" />
+            <textarea type="text" placeholder="Текст сообщения"></textarea>
+            <button>Отправить</button>
+          </form>
         </div>
+
         <div class="social">
           <ul>
             <li class="inst">
