@@ -60,8 +60,24 @@ span {
   }
 }
 
-.contacs {
+.contacts {
   .form input {
     @include adaptiv-font(35, 12);
+  }
+
+  .morphing {
+    @include adaptiv-font(220, 100);
+    // font-size: 120px;
+  }
+
+  .formWrapper {
+    a {
+      @include adaptiv-font(35, 10);
+      line-height: 1.5em;
+    }
+    p {
+      @include adaptiv-font(50, 10);
+      line-height: 1.1em;
+    }
   }
 }

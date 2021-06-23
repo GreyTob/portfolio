@@ -132,12 +132,12 @@ h6 {
   background-repeat: no-repeat; }
   .contacts .morphing {
     position: relative;
-    font-size: 120px;
+    min-height: 200px;
     color: #fff;
     filter: contrast(25) blur(1px); }
     .contacts .morphing .word {
       position: absolute;
-      top: 5%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       animation: word 16s infinite ease-in-out; }
@@ -167,11 +167,23 @@ h6 {
     filter: blur(1em);
     opacity: 0; } }
   .contacts .formWrapper {
-    max-width: 350px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 45px;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); }
+    .contacts .formWrapper p {
+      margin: 1.1em 0; }
+    .contacts .formWrapper a {
+      text-align: center;
+      display: block;
+      width: 100%;
+      color: #000000;
+      background: #ffffff;
+      transition: all 0.3s ease; }
+    .contacts .formWrapper a:hover {
+      background: none;
+      color: #ffffff; }
     .contacts .formWrapper input {
       outline: 0;
       background: #ffffff;
@@ -551,8 +563,19 @@ span {
   font-size: calc( 10px + 25 * ((100vw - 280px) / 3160));
   line-height: 1.2em; }
 
-.contacs .form input {
+.contacts .form input {
   font-size: calc( 12px + 23 * ((100vw - 280px) / 3160)); }
+
+.contacts .morphing {
+  font-size: calc( 100px + 120 * ((100vw - 280px) / 3160)); }
+
+.contacts .formWrapper a {
+  font-size: calc( 10px + 25 * ((100vw - 280px) / 3160));
+  line-height: 1.5em; }
+
+.contacts .formWrapper p {
+  font-size: calc( 10px + 40 * ((100vw - 280px) / 3160));
+  line-height: 1.1em; }
 
 body,
 html {

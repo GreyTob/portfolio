@@ -10,16 +10,16 @@
 
   .morphing {
     position: relative;
-    font-size: 120px;
-    // background-color: #000;
+    min-height: 200px;
+
     color: #fff;
-    // min-height: 100vh;
     filter: contrast(25) blur(1px);
 
     .word {
       position: absolute;
-      top: 5%;
+      top: 50%;
       left: 50%;
+
       transform: translate(-50%, -50%);
       animation: word $speed infinite ease-in-out;
 
@@ -46,11 +46,29 @@
   }
 
   .formWrapper {
-    max-width: 350px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 45px;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+    p {
+      margin: 1.1em 0;
+    }
+    a {
+      text-align: center;
+      display: block;
+      width: 100%;
+      color: $black;
+      background: $white;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      // background-color: #0cbaba;
+      background: none;
+      color: $white;
+    }
 
     input {
       outline: 0;
