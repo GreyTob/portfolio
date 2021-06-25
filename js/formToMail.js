@@ -1,4 +1,4 @@
-document.querySelector('#formSend').onclick = (e) => {
+document.querySelector('form').onsubmit = (e) => {
   e.preventDefault()
 }
 
