@@ -73,7 +73,7 @@ span {
   .formWrapper {
     a {
       @include adaptiv-font(35, 10);
-      line-height: 1.4em;
+      line-height: 1.1em;
       font-weight: bold;
       letter-spacing: 0.1em;
     }
@@ -83,7 +83,7 @@ span {
 
     p {
       @include adaptiv-font(45, 12);
-      line-height: 1.1em;
+      line-height: 1.02em;
       font-weight: bold;
     }
   }

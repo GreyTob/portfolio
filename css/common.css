@@ -125,14 +125,14 @@ h6 {
     padding: 0 5%; }
 
 .contacts {
-  background-color: #d2c598;
-  background: url("../assets/main-min.JPG");
+  background-image: url("../assets/main/mainBackground.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
   .contacts .morphing {
+    padding-top: 50px;
+    min-height: 100%;
     position: relative;
-    min-height: 200px;
     color: #fff;
     filter: contrast(25) blur(1px); }
     .contacts .morphing .word {
@@ -166,13 +166,11 @@ h6 {
     opacity: 0; } }
   .contacts .formWrapper {
     max-width: 600px;
-    margin: 0 auto;
-    padding: 20px 45px 30px;
-    text-align: left;
+    padding: 15px 25px;
     background: rgba(255, 255, 255, 0.34);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); }
     .contacts .formWrapper p {
-      margin: 20px 0; }
+      margin: 10px; }
     .contacts .formWrapper a {
       position: relative;
       text-align: center;
@@ -187,16 +185,15 @@ h6 {
       background: #ffffff;
       width: 100%;
       border: 0;
-      margin: 0 0 15px;
-      padding: 15px; }
+      margin: 5px 0 10px;
+      padding: 10px 15px; }
     .contacts .formWrapper textarea {
       width: 100%;
       min-height: 70px;
-      max-height: 200px;
       border: 0;
       margin: 0 0 15px;
       padding: 15px;
-      resize: vertical;
+      resize: none;
       overflow: auto; }
     .contacts .formWrapper button {
       text-transform: uppercase;
@@ -237,7 +234,7 @@ h6 {
       transform: scale(1.15); }
 
 .title {
-  background: url("../assets/main-min.JPG");
+  background-image: url("../assets/main/mainBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -573,7 +570,7 @@ span {
 
 .contacts .formWrapper a {
   font-size: calc( 10px + 25 * ((100vw - 280px) / 3160));
-  line-height: 1.4em;
+  line-height: 1.1em;
   font-weight: bold;
   letter-spacing: 0.1em; }
 
@@ -582,13 +579,12 @@ span {
 
 .contacts .formWrapper p {
   font-size: calc( 12px + 33 * ((100vw - 280px) / 3160));
-  line-height: 1.1em;
+  line-height: 1.02em;
   font-weight: bold; }
 
 body,
 html {
-  overflow: hidden;
-  background-color: #b2dee9; }
+  overflow: hidden; }
 
 .wrapper {
   width: 100vw;
