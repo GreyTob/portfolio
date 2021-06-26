@@ -203,6 +203,10 @@ h6 {
       padding: 15px;
       resize: none;
       overflow: auto; }
+    .contacts .formWrapper .formBlock input:invalid {
+      border-color: red; }
+    .contacts .formWrapper .formBlock input:valid {
+      border-color: green; }
     .contacts .formWrapper .formBlock button {
       text-transform: uppercase;
       outline: 0;
@@ -218,28 +222,31 @@ h6 {
     .contacts .formWrapper .formBlock button:active,
     .contacts .formWrapper .formBlock button:focus {
       background: #43a047; }
-  .contacts .social {
-    height: 100%;
-    margin-top: 50px; }
-    .contacts .social ul {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      width: 100%;
+    .contacts .formWrapper .social {
       height: 100%;
-      padding-bottom: 1%; }
-    .contacts .social ul li {
-      display: inline-block; }
-    .contacts .social img {
-      margin: 0 8px;
-      width: 20px;
-      height: 20px;
-      transform: scale(1);
-      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
-    .contacts .social img:hover {
-      transform: scale(1.15); }
-  .contacts .formWrapper:hover {
-    background: rgba(255, 255, 255, 0.3); }
+      margin-top: 50px; }
+      .contacts .formWrapper .social ul {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 1%; }
+      .contacts .formWrapper .social ul li {
+        display: inline-block; }
+      .contacts .formWrapper .social img {
+        margin: 0 8px;
+        width: 20px;
+        height: 20px;
+        transform: scale(1);
+        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+      .contacts .formWrapper .social img:hover {
+        transform: scale(1.15); }
+    .contacts .formWrapper .formWrapper:hover {
+      background: rgba(255, 255, 255, 0.3); }
+  @media (min-width: 1920px) {
+    .contacts .formWrapper {
+      max-width: 1200px; } }
 
 .title {
   background-image: url("../assets/main/mainBackground.jpg");
