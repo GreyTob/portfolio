@@ -3,15 +3,14 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  // height: 100hv;
 
   $speed: 20s;
   $wordCount: 6;
 
   .morphing {
-    padding-top: 50px;
-    min-height: 100%;
-    position: relative;
+    // padding-top: 50px;
+    height: 100%;
+    // position: relative;
 
     color: #fff;
     filter: contrast(25) blur(1px);
@@ -20,7 +19,6 @@
       position: absolute;
       top: 50%;
       left: 50%;
-
       transform: translate(-50%, -50%);
       animation: word $speed infinite ease-in-out;
 
@@ -35,7 +33,7 @@
         5%,
         100% {
           filter: blur(0px);
-          opacity: 1;
+          opacity: 0.5;
         }
         20%,
         80% {
@@ -47,14 +45,22 @@
   }
 
   .formWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 600px;
-    // height: 100%;
-    // margin: 0 auto;
-
+    height: 100%;
+    overflow: auto;
     padding: 15px 25px;
     // text-align: left;
     background: rgba(255, 255, 255, 0.34);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+    .links {
+      width: 100%;
+      height: 100%;
+    }
 
     p {
       margin: 10px;
@@ -75,44 +81,45 @@
       background: none;
       color: $white;
     }
+    .formBlock {
+      input {
+        outline: 0;
+        background: $white;
+        width: 100%;
+        border: 0;
+        margin: 5px 0 10px;
+        padding: 10px 15px;
+      }
 
-    input {
-      outline: 0;
-      background: $white;
-      width: 100%;
-      border: 0;
-      margin: 5px 0 10px;
-      padding: 10px 15px;
-    }
+      textarea {
+        width: 100%;
+        min-height: 70px;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        resize: none;
+        overflow: auto;
+      }
 
-    textarea {
-      width: 100%;
-      min-height: 70px;
-      border: 0;
-      margin: 0 0 15px;
-      padding: 15px;
-      resize: none;
-      overflow: auto;
-    }
+      button {
+        text-transform: uppercase;
+        outline: 0;
+        background: $green;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: #ffffff;
 
-    button {
-      text-transform: uppercase;
-      outline: 0;
-      background: $green;
-      width: 100%;
-      border: 0;
-      padding: 15px;
-      color: #ffffff;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+      }
 
-      -webkit-transition: all 0.3 ease;
-      transition: all 0.3 ease;
-      cursor: pointer;
-    }
-
-    button:hover,
-    button:active,
-    button:focus {
-      background: #43a047;
+      button:hover,
+      button:active,
+      button:focus {
+        background: #43a047;
+      }
     }
   }
 
@@ -121,8 +128,9 @@
   }
 
   .social {
-    width: 100%;
+    // width: 100%;
     height: 100%;
+    margin-top: 50px;
 
     ul {
       display: flex;

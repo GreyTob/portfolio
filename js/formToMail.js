@@ -12,9 +12,12 @@ $(document).ready(function () {
       url: 'mail.php', //Change
       data: th.serialize(),
     }).done(function () {
-      alert('Thank you!')
+      // alert('Сообщение Отправлено!')
+      document.querySelector('#formSend').textContent = 'Отправка...'
+      document.querySelector('#formSend input').setAttribute(readonly)
       setTimeout(function () {
-        // Done Functions
+        document.querySelector('#formSend').textContent = 'Отправлено'
+        document.querySelector('#formSend input').removeAttribute(readonly)
         th.trigger('reset')
       }, 1000)
     })

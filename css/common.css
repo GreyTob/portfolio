@@ -130,9 +130,7 @@ h6 {
   background-position: center;
   background-repeat: no-repeat; }
   .contacts .morphing {
-    padding-top: 50px;
-    min-height: 100%;
-    position: relative;
+    height: 100%;
     color: #fff;
     filter: contrast(25) blur(1px); }
     .contacts .morphing .word {
@@ -159,16 +157,25 @@ h6 {
   5%,
   100% {
     filter: blur(0px);
-    opacity: 1; }
+    opacity: 0.5; }
   20%,
   80% {
     filter: blur(1em);
     opacity: 0; } }
   .contacts .formWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 600px;
+    height: 100%;
+    overflow: auto;
     padding: 15px 25px;
     background: rgba(255, 255, 255, 0.34);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); }
+    .contacts .formWrapper .links {
+      width: 100%;
+      height: 100%; }
     .contacts .formWrapper p {
       margin: 10px; }
     .contacts .formWrapper a {
@@ -180,14 +187,14 @@ h6 {
     .contacts .formWrapper a:hover {
       background: none;
       color: #ffffff; }
-    .contacts .formWrapper input {
+    .contacts .formWrapper .formBlock input {
       outline: 0;
       background: #ffffff;
       width: 100%;
       border: 0;
       margin: 5px 0 10px;
       padding: 10px 15px; }
-    .contacts .formWrapper textarea {
+    .contacts .formWrapper .formBlock textarea {
       width: 100%;
       min-height: 70px;
       border: 0;
@@ -195,7 +202,7 @@ h6 {
       padding: 15px;
       resize: none;
       overflow: auto; }
-    .contacts .formWrapper button {
+    .contacts .formWrapper .formBlock button {
       text-transform: uppercase;
       outline: 0;
       background: #4caf50;
@@ -206,15 +213,15 @@ h6 {
       -webkit-transition: all 0.3 ease;
       transition: all 0.3 ease;
       cursor: pointer; }
-    .contacts .formWrapper button:hover,
-    .contacts .formWrapper button:active,
-    .contacts .formWrapper button:focus {
+    .contacts .formWrapper .formBlock button:hover,
+    .contacts .formWrapper .formBlock button:active,
+    .contacts .formWrapper .formBlock button:focus {
       background: #43a047; }
   .contacts .formWrapper:hover {
     background: rgba(255, 255, 255, 0.3); }
   .contacts .social {
-    width: 100%;
-    height: 100%; }
+    height: 100%;
+    margin-top: 50px; }
     .contacts .social ul {
       display: flex;
       justify-content: center;
