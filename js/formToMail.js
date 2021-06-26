@@ -14,10 +14,10 @@ $(document).ready(function () {
     }).done(function () {
       // alert('Сообщение Отправлено!')
       document.querySelector('#formSend').textContent = 'Отправка...'
-      document.querySelector('#formSend input').setAttribute(readonly)
+
       setTimeout(function () {
         document.querySelector('#formSend').textContent = 'Отправлено'
-        document.querySelector('#formSend input').removeAttribute(readonly)
+
         th.trigger('reset')
       }, 1000)
     })
