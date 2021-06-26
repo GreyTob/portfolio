@@ -408,9 +408,31 @@
               />
               <input type="hidden" name="form_subject" value="Form" />
               <!-- END Hidden Required Fields -->
-              <input type="text" placeholder="Ваше имя" />
-              <input type="email" placeholder="E-mail" />
-              <textarea type="text" placeholder="Текст сообщения"></textarea>
+
+              <input
+                required
+                type="text"
+                placeholder="Ваше имя"
+                minlength="2"
+                title="Пожалуйста, введите Ваше имя"
+              />
+
+              <input
+                type="email"
+                placeholder="E-mail"
+                pattern="^[^@]+@[^@.]+\.[^@]+$"
+                required
+                title="Пожалуйста, введите E-mail"
+              />
+
+              <textarea
+                required
+                type="text"
+                placeholder="Текст сообщения"
+                minlength="2"
+                title="Пожалуйста, введите Ваше сообщение"
+              ></textarea>
+
               <button id="formSend">Отправить</button>
             </form>
           </div>
