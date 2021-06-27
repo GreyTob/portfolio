@@ -154,15 +154,17 @@ h6 {
         .contacts .formWrapper .morphing .word:nth-child(1) {
           animation-delay: -20s; }
         .contacts .formWrapper .morphing .word:nth-child(2) {
-          animation-delay: -17.14286s; }
+          animation-delay: -17.5s; }
         .contacts .formWrapper .morphing .word:nth-child(3) {
-          animation-delay: -14.28571s; }
+          animation-delay: -15s; }
         .contacts .formWrapper .morphing .word:nth-child(4) {
-          animation-delay: -11.42857s; }
+          animation-delay: -12.5s; }
         .contacts .formWrapper .morphing .word:nth-child(5) {
-          animation-delay: -8.57143s; }
+          animation-delay: -10s; }
         .contacts .formWrapper .morphing .word:nth-child(6) {
-          animation-delay: -5.71429s; }
+          animation-delay: -7.5s; }
+        .contacts .formWrapper .morphing .word:nth-child(7) {
+          animation-delay: -5s; }
 
 @keyframes word {
   0%,
@@ -175,10 +177,9 @@ h6 {
     filter: blur(1em);
     opacity: 0; } }
     .contacts .formWrapper .links {
-      width: 100%;
-      height: 100%; }
+      width: 100%; }
     .contacts .formWrapper p {
-      margin: 10px; }
+      margin: 10px 0 10px; }
     .contacts .formWrapper a {
       position: relative;
       text-align: center;
@@ -223,7 +224,7 @@ h6 {
     .contacts .formWrapper .formBlock button:focus {
       background: #43a047; }
     .contacts .formWrapper .stack {
-      margin-top: 5%; }
+      margin-top: 1%; }
       .contacts .formWrapper .stack p {
         text-align: center; }
       .contacts .formWrapper .stack .skills {
@@ -231,7 +232,7 @@ h6 {
         justify-content: center;
         flex-wrap: wrap; }
       .contacts .formWrapper .stack .skill {
-        padding: 0 1.5%;
+        padding: 1.5%;
         margin: 1%;
         border-radius: 15px;
         background: rgba(255, 255, 255, 0.65); }
@@ -648,7 +649,6 @@ span {
 .contacts .formWrapper .skill {
   font-size: calc( 18px + 37 * ((100vw - 280px) / 3160));
   font-weight: bold;
-  line-height: 2.2em;
   letter-spacing: 0.12em; }
 
 body,

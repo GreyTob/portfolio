@@ -18,14 +18,12 @@ $(document).ready(function () {
       setTimeout(function () {
         const button = document.querySelector('#formSend')
         button.textContent = 'Отправлено'
-        button.style.background = $white
         th.trigger('reset')
       }, 1500)
 
       setTimeout(function () {
         const button = document.querySelector('#formSend')
         button.textContent = 'Отправить'
-        button.style.background = $green
       }, 5000)
     })
     return false

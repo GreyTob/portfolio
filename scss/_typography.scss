@@ -87,7 +87,7 @@ span {
     .skill {
       @include adaptiv-font(55, 18);
       font-weight: bold;
-      line-height: 2.2em;
+      // line-height: 2.2em;
       letter-spacing: 0.12em;
     }
   }
