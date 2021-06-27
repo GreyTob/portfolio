@@ -1,7 +1,7 @@
 const upBtn = document.querySelector('.up-button')
 const downBtn = document.querySelector('.down-button')
-const ArrowLeft = document.querySelector('#ArrowLeft')
-const ArrowRight = document.querySelector('#ArrowRight')
+const arrLeft = document.querySelector('#arrowLeft')
+const arrRight = document.querySelector('#arrowRight')
 
 const container = document.querySelector('.works')
 const sidebar = document.querySelector('.sidebar')
@@ -21,10 +21,10 @@ upBtn.addEventListener('click', () => {
 downBtn.addEventListener('click', () => {
   changeSlide('down')
 })
-ArrowRight.addEventListener('click', () => {
+arrRight.addEventListener('click', () => {
   changeSlide('up')
 })
-ArrowLeft.addEventListener('click', () => {
+arrLeft.addEventListener('click', () => {
   changeSlide('down')
 })
 document.addEventListener('keydown', (event) => {

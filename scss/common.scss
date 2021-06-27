@@ -26,3 +26,9 @@ html {
   display: grid;
   place-items: center;
 }
+
+.hide {
+  opacity: 0;
+  // display: none;
+  transition: all 0.3s ease;
+}

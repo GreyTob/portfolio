@@ -353,7 +353,7 @@ h6 {
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.5s ease-in-out; }
+    transition: all 0.5s ease-in-out; }
   .works .sidebar > div {
     height: 100%;
     width: 100%;
@@ -398,7 +398,7 @@ h6 {
     top: 0;
     left: 35%;
     width: 65%;
-    transition: transform 0.5s ease-in-out; }
+    transition: all 0.5s ease-in-out; }
     .works .main-slide > div {
       background-repeat: no-repeat;
       background-size: cover;
@@ -411,7 +411,8 @@ h6 {
     color: #aaa;
     cursor: pointer;
     font-size: 16px;
-    padding: 15px; }
+    padding: 15px;
+    transition: all 0.5s ease-in-out; }
   @media (min-width: 1920px) {
     .works button {
       font-size: 26px;
@@ -433,7 +434,7 @@ h6 {
     transform: translateY(-100%);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px; }
-  .works #ArrowRight span {
+  .works #arrowRight span {
     position: absolute;
     bottom: 60px;
     left: 52%;
@@ -468,7 +469,7 @@ h6 {
   100% {
     transform: rotate(-135deg) translate(-20px, 20px);
     opacity: 0; } }
-  .works #ArrowLeft span {
+  .works #arrowLeft span {
     position: absolute;
     bottom: 60px;
     left: 48%;
@@ -525,8 +526,6 @@ h6 {
   .board .time-btn:hover {
     border: 2px solid #c6ccd2;
     color: #c6ccd2; }
-  .board .hide {
-    opacity: 0; }
   .board .primary {
     color: #c6ccd2; }
   .board .circle {
@@ -665,3 +664,7 @@ html {
   height: 100%;
   display: grid;
   place-items: center; }
+
+.hide {
+  opacity: 0;
+  transition: all 0.3s ease; }

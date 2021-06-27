@@ -6,6 +6,12 @@ const boardTitle = document.querySelector('#board h2')
 const total = document.querySelector('#total')
 const gameReboot = document.querySelector('#gameReboot')
 let interval = null
+const arrowLeft = document.querySelector('#arrowLeft')
+const arrowRight = document.querySelector('#arrowRight')
+const dots = document.querySelector('.dots')
+const controls = document.querySelector('.controls')
+const mSlide = document.querySelector('.main-slide')
+const sideBar = document.querySelector('.sidebar')
 
 const circleColor = [
   '#e5194a',
@@ -18,6 +24,7 @@ const circleColor = [
 
 let time = 0
 let score = 0
+let bestScore = 0
 
 timeList.addEventListener('click', (event) => {
   //наследование
@@ -43,6 +50,21 @@ function startGame() {
   timeTitle.classList.remove('hide')
   boardTitle.classList.add('hide')
   timeList.classList.add('hide')
+  arrowLeft.classList.add('hide')
+  arrowRight.classList.add('hide')
+  dots.classList.add('hide')
+  controls.classList.add('hide')
+
+  setTimeout(() => {
+    arrowLeft.style.display = 'none'
+    arrowRight.style.display = 'none'
+    dots.style.display = 'none'
+    controls.style.display = 'none'
+  }, 300)
+
+  mSlide.style.width = '100%'
+  mSlide.style.left = '0'
+  sideBar.style.width = 0
 }
 
 function decreseTime() {
@@ -69,8 +91,35 @@ function finishGame() {
   timeTitle.classList.add('hide')
   document.querySelector('.circle').remove()
 
+  arrowLeft.classList.remove('hide')
+  arrowRight.classList.remove('hide')
+  dots.classList.remove('hide')
+  dots.style.transition = 'all 0.3s ease'
+  controls.classList.remove('hide')
+
+  setTimeout(() => {
+    arrowLeft.style.display = 'block'
+    arrowRight.style.display = 'block'
+    dots.style.display = 'block'
+    controls.style.display = 'block'
+  }, 300)
+
+  mSlide.style.width = '65%'
+  mSlide.style.left = '35%'
+  sideBar.style.width = '35%'
+
+  bestOfScore()
+
   gameReboot.addEventListener('click', restartGame)
 }
+
+const theBest = document.querySelector('.theBest')
+function bestOfScore() {
+  if (score > bestScore) bestScore = score
+  theBest.classList.remove('hide')
+  theBest.textContent = `Твой лучший результат: ${bestScore}`
+}
+console.log(bestScore)
 
 function restartGame() {
   time = Infinity
@@ -92,7 +141,7 @@ function createRandomCircle() {
 
   circle.style.background = setColorCircle()
 
-  const size = getRandonNumber(10, 60)
+  const size = getRandonNumber(20, 60)
   const { width, height } = board.getBoundingClientRect()
   let x = getRandonNumber(0, width - size)
   let y = getRandonNumber(0, height - size)
@@ -110,7 +159,7 @@ function getRandonNumber(min, max) {
   return Math.round(Math.random() * (max - min) + min)
 }
 
-//автомато набирать очки
+//автоматом набирать очки
 // function winTheGame() {
 //   function killCircle() {
 //     const circle = document.querySelector('.circle')
