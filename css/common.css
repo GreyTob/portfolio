@@ -222,6 +222,21 @@ h6 {
     .contacts .formWrapper .formBlock button:active,
     .contacts .formWrapper .formBlock button:focus {
       background: #43a047; }
+    .contacts .formWrapper .stack {
+      margin-top: 5%; }
+      .contacts .formWrapper .stack p {
+        text-align: center; }
+      .contacts .formWrapper .stack .skills {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; }
+      .contacts .formWrapper .stack .skill {
+        padding: 0 1.5%;
+        margin: 1%;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.65); }
+      .contacts .formWrapper .stack .skill:hover {
+        background: rgba(255, 255, 255, 0.9); }
     .contacts .formWrapper .social {
       height: 100%;
       margin-top: 50px; }
@@ -242,8 +257,8 @@ h6 {
         transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
       .contacts .formWrapper .social img:hover {
         transform: scale(1.15); }
-    .contacts .formWrapper .formWrapper:hover {
-      background: rgba(255, 255, 255, 0.3); }
+  .contacts .formWrapper:hover {
+    background: rgba(255, 255, 255, 0.3); }
   @media (min-width: 1920px) {
     .contacts .formWrapper {
       max-width: 1200px; } }
@@ -577,10 +592,10 @@ span {
   font-size: calc( 10px + 25 * ((100vw - 280px) / 3160));
   line-height: 1.2em; }
 
-.contacts .form input {
+.contacts .formWrapper .form input {
   font-size: calc( 12px + 23 * ((100vw - 280px) / 3160)); }
 
-.contacts .morphing {
+.contacts .formWrapper .morphing {
   font-size: calc( 100px + 120 * ((100vw - 280px) / 3160)); }
 
 .contacts .formWrapper a {
@@ -596,6 +611,12 @@ span {
   font-size: calc( 12px + 33 * ((100vw - 280px) / 3160));
   line-height: 1.02em;
   font-weight: bold; }
+
+.contacts .formWrapper .skill {
+  font-size: calc( 18px + 37 * ((100vw - 280px) / 3160));
+  font-weight: bold;
+  line-height: 2.2em;
+  letter-spacing: 0.12em; }
 
 body,
 html {

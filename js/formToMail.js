@@ -19,7 +19,7 @@ $(document).ready(function () {
         document.querySelector('#formSend').textContent = 'Отправлено'
 
         th.trigger('reset')
-      }, 1000)
+      }, 1500)
     })
     return false
   })
