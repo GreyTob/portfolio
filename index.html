@@ -17,6 +17,7 @@
       defer
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     ></script>
+    <script defer src="js/game.js"></script>
     <script defer src="js/formToMail.js"></script>
     <title>Laptov Sergey</title>
   </head>
@@ -116,6 +117,37 @@
       <section class="works">
         <div class="container">
           <div class="sidebar">
+            <div
+              style="
+                background-color: #f3e6e8;
+                background-image: linear-gradient(
+                  315deg,
+                  #f3e6e8 0%,
+                  #d5d0e5 74%
+                );
+              "
+            >
+              <div class="info">
+                <h3>Игра - поймай круг</h3>
+                <p>Проверь свою точность</p>
+                <p>написано на чистом JS</p>
+              </div>
+
+              <!-- <div class="links">
+                <a
+                  class="item"
+                  href=""
+                  target="_blank"
+                  >Открыть сайт</a
+                >
+                <a
+                  class="item"
+                  href=""
+                  target="_blank"
+                  >Посмотреть на GitHub</a
+                >
+              </div> -->
+            </div>
             <div
               style="
                 background-color: #2d3436;
@@ -353,6 +385,26 @@
               "
             >
               <h2>llama</h2>
+            </div>
+            <div class="board" id="board">
+              <h2>Выберите время</h2>
+              <h3 id="timeTitle" class="hide">
+                Осталось <span id="time">00:00</span>
+              </h3>
+              <ul class="time-list">
+                <li>
+                  <button class="time-btn" data-time="10">10 сек</button>
+                </li>
+
+                <li>
+                  <button class="time-btn" data-time="30">30 сек</button>
+                </li>
+                <li>
+                  <button class="time-btn" data-time="60">60 сек</button>
+                </li>
+              </ul>
+              <h3 id="total" class="hide"></h3>
+              <button id="gameReboot" class="time-btn hide">Сыграем еще</button>
             </div>
           </div>
           <div class="controls">

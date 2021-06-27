@@ -502,6 +502,39 @@ h6 {
     transform: rotate(45deg) translate(-20px, 20px);
     opacity: 0; } }
 
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  background: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%);
+  overflow: hidden; }
+  .board .time-btn {
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: 2px solid #c0c0c0;
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem; }
+  .board .time-btn:hover {
+    border: 2px solid #c6ccd2;
+    color: #c6ccd2; }
+  .board .hide {
+    opacity: 0; }
+  .board .primary {
+    color: #c6ccd2; }
+  .board .circle {
+    background: linear-gradient(90deg, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1000;
+    cursor: pointer; }
+
 .dots {
   z-index: 1;
   list-style: none;
