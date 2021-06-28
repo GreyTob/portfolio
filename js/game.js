@@ -2,10 +2,12 @@ const timeTitle = document.querySelector('#timeTitle')
 const timeList = document.querySelector('.time-list')
 const timeEl = document.querySelector('#time')
 const board = document.querySelector('#board')
-const boardTitle = document.querySelector('#board h2')
 const total = document.querySelector('#total')
 const gameReboot = document.querySelector('#gameReboot')
 let interval = null
+
+//hide
+const boardTitle = document.querySelector('#board h2')
 const arrowLeft = document.querySelector('#arrowLeft')
 const arrowRight = document.querySelector('#arrowRight')
 const dots = document.querySelector('.dots')
@@ -60,6 +62,8 @@ function startGame() {
     arrowRight.style.display = 'none'
     dots.style.display = 'none'
     controls.style.display = 'none'
+    timeList.style.display = 'none'
+    gameReboot.style.display = 'none'
   }, 300)
 
   mSlide.style.width = '100%'
@@ -102,6 +106,8 @@ function finishGame() {
     arrowRight.style.display = 'block'
     dots.style.display = 'block'
     controls.style.display = 'block'
+    timeList.style.display = 'block'
+    gameReboot.style.display = 'block'
   }, 300)
 
   mSlide.style.width = '65%'
