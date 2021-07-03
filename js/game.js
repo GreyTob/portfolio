@@ -45,6 +45,7 @@ board.addEventListener('click', (event) => {
 })
 
 function startGame() {
+  //запрещаю перелистывание слайдов страницы words
   document
     .querySelector('.works')
     .removeEventListener('touchstart', handleTouchStart, false)

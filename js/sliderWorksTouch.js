@@ -1,9 +1,9 @@
-let touchX = 0
-let touchY = 0
+let touchX = null
+let touchY = null
 
 /**
- * ффункция получает координаты точки касания
- * @param {object} событие event
+ * функция получает координаты точки касания события touchstart
+ * @param {object} e интерфейс Event
  */
 
 function handleTouchStart(e) {
@@ -11,21 +11,26 @@ function handleTouchStart(e) {
   touchY = e.touches[0].clientY
 }
 
+/**
+ * Функция определяет в какую сторону было совершено движение пальцем при событии touchmove.
+ * Координаты движения события touchmove записываются в переменные touchXmove, touchНmove.
+ * По модулю вычисляется разница координат событий touchstart  и touchmove. При divX > 0 движение совершается влево и происходит вызов функции changeSlide в коротую передается параметр 'up'. При divX < 0 движение совершается ввправо и просходит вызов функции changeSlide в коротую передается параметр 'down'. Переменная divY позволяет вычислить что движение было совершено именно в сторону а не вниз или вверх
+ * координатам точки касания присваивается null
+ * @param {object} e событие event
+ * @returns {boolean} возвразает false если движения не было
+ */
 function handleTouchMove(e) {
-  //если движения не было то false
-  if (!touchX) {
+  if (!touchX && touchY) {
     return false
   }
-  //получаю координаты после движения
+
   let touchXmove = e.touches[0].clientX
   let touchYmove = e.touches[0].clientY
 
-  //смотрю разницу координат до и после по модулю, чтобы узнать в какую сторону движение
   let divX = touchX - touchXmove
   let divY = touchY - touchYmove
-  //если divX больше, то движение влево иначе вправо
+
   if (Math.abs(divX) > Math.abs(divY)) {
-    //если divX > 0, то движение влево
     if (divX > 0) {
       changeSlide('up')
     } else changeSlide('down')
