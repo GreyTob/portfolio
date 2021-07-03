@@ -45,6 +45,13 @@ board.addEventListener('click', (event) => {
 })
 
 function startGame() {
+  document
+    .querySelector('.works')
+    .removeEventListener('touchstart', handleTouchStart, false)
+  document
+    .querySelector('.works')
+    .removeEventListener('touchmove', handleTouchMove, false)
+
   interval = setInterval(decreseTime, 1000)
 
   createRandomCircle()
@@ -117,6 +124,13 @@ function finishGame() {
   bestOfScore()
 
   gameReboot.addEventListener('click', restartGame)
+  document
+    .querySelector('.works')
+    .addEventListener('touchstart', handleTouchStart, false)
+
+  document
+    .querySelector('.works')
+    .addEventListener('touchmove', handleTouchMove, false)
 }
 
 const theBest = document.querySelector('.theBest')
