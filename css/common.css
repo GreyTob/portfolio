@@ -225,7 +225,7 @@ h6 {
       background: #43a047; }
     .contacts .formWrapper .stack {
       margin-top: 1%; }
-      .contacts .formWrapper .stack p {
+      .contacts .formWrapper .stack h3 {
         text-align: center; }
       .contacts .formWrapper .stack .skills {
         display: flex;
