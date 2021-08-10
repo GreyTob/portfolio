@@ -66,3 +66,9 @@ node_modules/
 .env
 
 node_modules/
+
+# dependencies
+/node_modules
+/#sourse
+.idea
+prepros.config
