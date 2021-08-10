@@ -12,13 +12,13 @@
     max-width: 600px;
     height: 100%;
     overflow: auto;
-    padding: 15px 25px;
+    padding: 10px 25px;
     // text-align: left;
     background: rgba(255, 255, 255, 0.34);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 
-    $speed: 20s;
-    $wordCount: 7;
+    $speed: 25s;
+    $wordCount: 10;
 
     .morphing {
       padding: 25px 0;
@@ -36,7 +36,7 @@
 
         @for $i from 0 to $wordCount {
           &:nth-child(#{$i + 1}) {
-            animation-delay: calc(($speed / ($wordCount + 1) * $i) - $speed);
+            animation-delay: ($speed / ($wordCount + 1) * $i) - $speed;
           }
         }
 
@@ -86,15 +86,15 @@
         background: $white;
         width: 100%;
         border: 0;
-        margin: 5px 0 10px;
-        padding: 10px 15px;
+        margin: 0 0 7px;
+        padding: 7px 15px;
       }
 
       textarea {
         width: 100%;
         min-height: 70px;
         border: 0;
-        margin: 0 0 15px;
+        margin: 0 0 7px;
         padding: 15px;
         resize: none;
         overflow: auto;
@@ -113,10 +113,8 @@
         background: $green;
         width: 100%;
         border: 0;
-        padding: 15px;
+        padding: 12px;
         color: #ffffff;
-
-        -webkit-transition: all 0.3 ease;
         transition: all 0.3 ease;
         cursor: pointer;
       }
@@ -129,9 +127,6 @@
     }
 
     .stack {
-      margin-top: 1%;
-      // opacity: 0.88;
-
       h3 {
         text-align: center;
       }
