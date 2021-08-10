@@ -3,6 +3,7 @@
  */
 
 var fs = require('fs'),
+  mkdir = require('mkdirp'),
   path = require('path'),
   spawn = require('cross-spawn'),
   sass = require('../lib/extensions');
@@ -23,7 +24,7 @@ function afterBuild(options) {
         : 'Release',
     'binding.node');
 
-  fs.mkdir(path.dirname(install), {recursive: true}, function(err) {
+  mkdir(path.dirname(install), function(err) {
     if (err && err.code !== 'EEXIST') {
       console.error(err.message);
       return;
