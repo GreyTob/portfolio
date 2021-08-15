@@ -70,10 +70,10 @@ span {
       @include adaptiv-font(180, 90);
     }
     a {
-      @include adaptiv-font(30, 10);
-      line-height: 0.7em;
+      @include adaptiv-font(28, 10);
+      line-height: 0.6em;
       font-weight: bold;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
     }
     a:hover {
       letter-spacing: 0.15em;

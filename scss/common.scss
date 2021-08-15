@@ -1,5 +1,6 @@
 @import '_reset.scss';
 @import '_variables.scss';
+@import '_loader.scss';
 @import '_about.scss';
 @import '_contacts.scss';
 @import '_title.scss';
@@ -15,9 +16,12 @@ html {
 }
 
 .wrapper {
+  display: none;
+  opacity: 0;
   width: 100vw;
   height: 100vh;
   position: relative;
+  transition: opacity 0.6s ease-in;
 }
 
 .wrapper section {

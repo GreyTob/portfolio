@@ -55,6 +55,7 @@ gulp.task('js', async function () {
       'js/_game.js',
       'js/_sliderWorks.js',
       'js/_sliderWorksTouch.js',
+      'js/_loader.js',
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
